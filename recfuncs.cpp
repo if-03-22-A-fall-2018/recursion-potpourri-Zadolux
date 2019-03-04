@@ -39,7 +39,14 @@ int calc_array_size(int n)
 
 int calc_factorial(int n)
 {
-  return 0;
+  if(n <= 1)
+  {
+    return 1;
+  }
+  else
+  {
+    return n * calc_factorial(n - 1);
+  }
 }
 
 void calc_sums(int* n, int count, int* out_arr, int* out_arr_bin)
