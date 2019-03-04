@@ -51,7 +51,7 @@ int calc_factorial(int n)
 
 void calc_sums(int* n, int count, int* out_arr, int* out_arr_bin)
 {
-
+  run_all(n, count - 1, 0, 0, 0, out_arr, out_arr_bin);
 }
 
 int convert_to_binary(int n)
@@ -64,7 +64,7 @@ int convert_to_binary(int n)
   return 0;
 }
 
-int thx(int* nums, int size, int* out_arr, int* out_arr_bin, int i, int index, int sum)
+int run_all(int* nums, int size, int* out_arr, int* out_arr_bin, int i, int index, int sum)
 {
   return 0;
 }
