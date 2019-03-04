@@ -32,6 +32,8 @@ int convert_to_binary(int n)
   {
     return (n % 2) + (10 * (convert_to_binary(n / 2)));
   }
+
+  return 0;
 }
 
 int thx(int* nums, int size, int* out_arr, int* out_arr_bin, int i, int index, int sum)
