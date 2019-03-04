@@ -28,7 +28,10 @@ void calc_sums(int* n, int count, int* out_arr, int* out_arr_bin)
 
 int convert_to_binary(int n)
 {
-  return 0;
+  if(n != 0)
+  {
+    return (n % 2) + (10 * (convert_to_binary(n / 2)));
+  }
 }
 
 int thx(int* nums, int size, int* out_arr, int* out_arr_bin, int i, int index, int sum)
