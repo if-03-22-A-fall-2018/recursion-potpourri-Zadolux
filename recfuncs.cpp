@@ -1,9 +1,21 @@
 #include "recfuncs.h"
 #include <stdlib.h>
 
-struct CalculationResults perform_calculations(int* arr, int n)
+struct CalculationResults perform_calculations(int* arr, int num)
 {
   struct CalculationResults calc_results;
+  calc_results.num_factorials = create_array(num);
+  calc_results.no_of_nums = num;
+  calc_results.no_of_sums = calc_array_size(num);
+
+  calc_results.binary_sums = create_array(calc_results.no_of_sums);
+  calc_results.sums = create_array(calc_results.no_of_sums);
+
+  for(int i = 0; i < num; i++)
+  {
+    calc_results.num_factorials[i] = calc_factorial(arr[i]);
+  }
+
   return calc_results;
 }
 
@@ -27,25 +39,25 @@ int* create_array(int size)
   }
 }
 
-int calc_array_size(int n)
+int calc_array_size(int num)
 {
-  if(n <= 0)
+  if(num <= 0)
   {
     return 1;
   }
 
-  return 2 * calc_array_size(n - 1);
+  return 2 * calc_array_size(num - 1);
 }
 
-int calc_factorial(int n)
+int calc_factorial(int num)
 {
-  if(n <= 1)
+  if(num <= 1)
   {
     return 1;
   }
   else
   {
-    return n * calc_factorial(n - 1);
+    return num * calc_factorial(num - 1);
   }
 }
 
