@@ -1,4 +1,5 @@
 #include "recfuncs.h"
+#include <stdlib.h>
 
 struct CalculationResults perform_calculations(int* arr, int n)
 {
@@ -8,7 +9,22 @@ struct CalculationResults perform_calculations(int* arr, int n)
 
 int* create_array(int size)
 {
-  return 0;
+  if(size > 0)
+  {
+    int new_array_size = calc_array_size(size);
+    int* new_array = (int*) malloc(sizeof(int) * new_array_size);
+
+    for(int i = 0; i < new_array_size; i++)
+    {
+      new_array[i] = -1;
+    }
+
+    return new_array;
+  }
+  else
+  {
+    return 0;
+  }
 }
 
 int calc_array_size(int n)
