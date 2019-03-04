@@ -13,7 +13,12 @@ int* create_array(int size)
 
 int calc_array_size(int n)
 {
-  return 0;
+  if(n <= 0)
+  {
+    return 1;
+  }
+
+  return 2 * calc_array_size(n - 1);
 }
 
 int calc_factorial(int n)
