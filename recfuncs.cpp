@@ -79,7 +79,7 @@ int convert_to_binary(int n)
 int do_subset(int* nums, int size, int i, int index, int* out_arr, int* out_arr_bin, int sum)
 {
 
-  if(i>size)
+  if(i > size)
   {
     out_arr[index] = sum;
     out_arr_bin[index] = convert_to_binary(sum);
