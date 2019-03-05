@@ -16,6 +16,7 @@ struct CalculationResults perform_calculations(int* arr, int num)
     calc_results.num_factorials[i] = calc_factorial(arr[i]);
   }
 
+  calc_sums(arr, num, calc_results.sums, calc_results.binary_sums);
   return calc_results;
 }
 
